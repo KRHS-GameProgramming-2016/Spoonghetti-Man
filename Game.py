@@ -5,7 +5,10 @@ from Player import *
 from specialmeatball import *
 from spicymeatball import *
 from spoonghettimonster import *
+from Wall import*  
 pygame.init()
+
+clock = pygame.time.Clock()
 
 width = 1000 
 height = 600
@@ -19,10 +22,10 @@ level = Level("level1.lvl")
 balls = [Ball("ball.png",
               [random.randint(1, 10), random.randint(1, 10)],
               [random.randint(0, width-100), random.randint(0, height-100)],
-              30)
+              random.randint(20, 100))
         ]
 
-player = PlayerBall(5, [width/2,height/2])
+player = Player(5, [width/2,height/2])
 walls = level.walls
 
 using = "keyboard"
@@ -61,7 +64,7 @@ while True:
             balls += [Ball("ball.png",
                   [random.randint(1, 10), random.randint(1, 10)],
                   [random.randint(0, width-100), random.randint(0, height-100)],
-                   30)
+                  random.randint(20, 100))
             ]
     
     #for ball in balls:
@@ -69,16 +72,16 @@ while True:
         #ball.bounceScreen(size)
         
     player.move()
-    #player.bounceScreen(size)
-    #for wall in walls:
-        #player.bounceWall(wall)
+    player.bounceScreen(size)
+    for wall in walls:
+        player.bounceWall(wall)
     
-    #for hitter in balls:
-        #for hittie in balls:
-            #if hitter != hittie:
-                #hitter.bounceBall(hittie)
-        #if player.bounceBall(hitter):
-            #balls.remove(hitter)
+    for hitter in balls:
+        for hittie in balls:
+            if hitter != hittie:
+                hitter.bounceBall(hittie)
+        if player.bounceBall(hitter):
+            balls.remove(hitter)
     
     bgColor = r,g,b
     screen.fill(bgColor)
@@ -88,4 +91,9 @@ while True:
     for wall in walls:
         screen.blit(wall.image, wall.rect)
     pygame.display.flip()
-    #clock.tick(60)
+    clock.tick(60)
+    
+    
+    
+    
+    
