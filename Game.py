@@ -69,16 +69,16 @@ while True:
         #ball.bounceScreen(size)
         
     player.move()
-    player.bounceScreen(size)
-    for wall in walls:
-        player.bounceWall(wall)
+    #player.bounceScreen(size)
+    #for wall in walls:
+        #player.bounceWall(wall)
     
-    for hitter in balls:
-        for hittie in balls:
-            if hitter != hittie:
-                hitter.bounceBall(hittie)
-        if player.bounceBall(hitter):
-            balls.remove(hitter)
+    #for hitter in balls:
+        #for hittie in balls:
+            #if hitter != hittie:
+                #hitter.bounceBall(hittie)
+        #if player.bounceBall(hitter):
+            #balls.remove(hitter)
     
     bgColor = r,g,b
     screen.fill(bgColor)
