@@ -2,7 +2,7 @@
 import pygame, sys, math
 
 class Wall():
-    def __init__(self, pos=[0,0], 1=None):
+    def __init__(self, pos=[0,0], size=None):
         self.image = pygame.image.load("rsc/wall/wall.png")
         if size:
             self.image = pygame.transform.scale(self.image, [size,size])
