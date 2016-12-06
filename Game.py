@@ -19,7 +19,7 @@ bgColor = r,g,b = 0, 0, 0
 
 level = Level("level1.lvl")
 
-balls = [Ball("ball.png",
+balls = [Ball("spicy.png",
               [random.randint(1, 10), random.randint(1, 10)],
               [random.randint(0, width-100), random.randint(0, height-100)],
               random.randint(20, 100))

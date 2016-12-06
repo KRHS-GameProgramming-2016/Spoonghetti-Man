@@ -3,7 +3,7 @@ import pygame, sys, math
 
 class Ball():
     def __init__(self, image, speed=[0,0], pos=[0,0], size=None):
-        self.image = pygame.image.load("spicy"+image)
+        self.image = pygame.image.load("rsc/ball/"+image)
         if size:
             self.image = pygame.transform.scale(self.image, [size,size])
         self.rect = self.image.get_rect(center = pos)
