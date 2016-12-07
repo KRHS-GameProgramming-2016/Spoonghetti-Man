@@ -1,4 +1,3 @@
-
 import pygame, sys, math
 
 class Ball():
