@@ -25,11 +25,11 @@ balls = [Ball("regular.png",
               random.randint(20, 100))
         ]
 
-player = Player(5, [width/20,height/14])
+player = Player(7, [width/15,height/9])
 walls = level.walls
 
 using = "keyboard"
-level = 1
+lev = 1
 
 while True:
     for event in pygame.event.get():
@@ -59,9 +59,15 @@ while True:
                 player.goMouse(event.pos)
     
     if len(balls) == 0:
-        level += 1
-        for b in range(level):
+        lev += 1
+        for b in range(lev):
             balls += [Ball("spicy.png",
+                  [random.randint(1, 10), random.randint(1, 10)],
+                  [random.randint(0, width-100), random.randint(0, height-100)],
+                  random.randint(20, 100))
+            ]
+        for b in range(lev*2):
+            balls += [Ball("regular.png",
                   [random.randint(1, 10), random.randint(1, 10)],
                   [random.randint(0, width-100), random.randint(0, height-100)],
                   random.randint(20, 100))
