@@ -1,5 +1,5 @@
 import pygame, sys, math
-from Wall import *
+from wall import *
 class Level():
     def __init__(self, levelFile, tileSize=50):
         self.walls = []
