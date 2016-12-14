@@ -61,7 +61,7 @@ while True:
     if len(balls) == 0:
         level += 1
         for b in range(level):
-            balls += [Ball("spicy.png",
+            balls += [Ball("regular.png",
                   [random.randint(1, 10), random.randint(1, 10)],
                   [random.randint(0, width-100), random.randint(0, height-100)],
                   random.randint(20, 100))
