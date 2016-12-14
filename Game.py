@@ -10,8 +10,8 @@ pygame.init()
 
 clock = pygame.time.Clock()
 
-width = 1000 
-height = 600
+width = 1300 
+height = 700
 size = width, height
 screen = pygame.display.set_mode(size)
 
@@ -25,11 +25,11 @@ balls = [Ball("regular.png",
               random.randint(20, 100))
         ]
 
-player = Player(5, [width/20,height/14])
+player = Player(7, [width/15,height/9])
 walls = level.walls
 
 using = "keyboard"
-level = 1
+lev = 1
 
 while True:
     for event in pygame.event.get():
@@ -59,8 +59,20 @@ while True:
                 player.goMouse(event.pos)
     
     if len(balls) == 0:
+<<<<<<< HEAD
         level += 1
         for b in range(level):
+            balls += [Ball("regular.png",
+=======
+        lev += 1
+        for b in range(lev):
+            balls += [Ball("spicy.png",
+>>>>>>> origin/master
+                  [random.randint(1, 10), random.randint(1, 10)],
+                  [random.randint(0, width-100), random.randint(0, height-100)],
+                  random.randint(20, 100))
+            ]
+        for b in range(lev*2):
             balls += [Ball("regular.png",
                   [random.randint(1, 10), random.randint(1, 10)],
                   [random.randint(0, width-100), random.randint(0, height-100)],
