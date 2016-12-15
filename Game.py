@@ -61,9 +61,15 @@ while True:
                 player.goMouse(event.pos)
     
     if len(balls) == 0:
+<<<<<<< HEAD
+        level += 1
+        for b in range(level):
+            balls += [Ball("regular.png",
+=======
         lev += 1
         for b in range(lev):
             balls += [Ball("spicy.png",
+>>>>>>> origin/master
                   [random.randint(1, 10), random.randint(1, 10)],
                   [random.randint(0, width-100), random.randint(0, height-100)],
                   random.randint(20, 100))

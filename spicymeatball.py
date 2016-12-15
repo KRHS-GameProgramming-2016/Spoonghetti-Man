@@ -8,7 +8,9 @@ class Ball():
             self.image = pygame.transform.scale(self.image, [size,size])
         self.rect = self.image.get_rect(center = pos)
         self.speedx = speed[0]
-        self.speedy = speed[1]
+        self.speedy = speed[
+        
+        1]
         self.speed = [self.speedx, self.speedy]
         self.radius = self.rect.width/2 -1
         self.didBounceX = False
