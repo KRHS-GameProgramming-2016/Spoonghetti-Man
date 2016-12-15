@@ -16,8 +16,8 @@ size = width, height
 screen = pygame.display.set_mode(size)
 
 bgColor = r,g,b = 0, 0, 0
-bgImg = pyg
-bgRect bgImage.get_rect("background/Background.png")
+#bgImg = pyg
+#bgRect bgImage.get_rect("background/Background.png")
 
 level = Level("level1.lvl")
 
