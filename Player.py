@@ -3,10 +3,10 @@ from Meatball import *
 
 class Player(Ball):
     def __init__(self, maxSpeed =5 , pos=[0,0]):
-        Ball.__init__(self, "SPOONER3.png", [0,0], pos, None)
+        Ball.__init__(self, "SPOONER31.png", [0,0], pos, None)
         self.maxSpeed = maxSpeed     
-        self.images = [pygame.image.load("rsc/ball/SPOONER3.png"),
-                       pygame.image.load("rsc/ball/SPOONER3.png")
+        self.images = [pygame.image.load("rsc/ball/SPOONER31.png"),
+                       pygame.image.load("rsc/ball/SPOONER31.png")
                       ]
         self.frame = 0
         self.maxFrame = len(self.images) - 1
