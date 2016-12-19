@@ -16,8 +16,8 @@ size = width, height
 screen = pygame.display.set_mode(size)
 
 bgColor = r,g,b = 0, 0, 0
-bgImage = pygame.image.load("Background/Speg.png").convert()
-bgRect = bgImage.get_rect()
+#bgImage = pygame.image.load("Background/YELLOW.png").convert()
+#bgRect = bgImage.get_rect()
 
 level = Level("level1.lvl")
 
@@ -91,9 +91,9 @@ while True:
         if player.bounceBall(hitter):
             balls.remove(hitter)
     
-    bgColor = r,g,b
-    screen.fill(bgColor)
-    screen.blit(bgImage, bgRect)
+    #bgColor = r,g,b
+    #screen.fill(bgColor)
+    #screen.blit(bgImage, bgRect)
     for ball in balls:
         screen.blit(ball.image, ball.rect)
     screen.blit(player.image, player.rect)
