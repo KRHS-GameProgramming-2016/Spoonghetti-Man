@@ -10,13 +10,13 @@ pygame.init()
 
 clock = pygame.time.Clock()
 
-width = 1300 
+width = 1000 
 height = 700
 size = width, height
 screen = pygame.display.set_mode(size)
 
 bgColor = r,g,b = 0, 0, 0
-bgImage = pygame.image.load("background/Spegmeat.png").convert()
+bgImage = pygame.image.load("background/speg.png").convert()
 bgRect = bgImage.get_rect()
 
 level = Level("level1.lvl")
