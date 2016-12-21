@@ -1,9 +1,7 @@
 
 import pygame, sys, math
-
 class Wall():
-    def __init__(self, pos=[0,0], size=None):
+    def __init__(self, pos, tileSize=50):
         self.image = pygame.image.load("rsc/wall/wall.png")
-        if size:
-            self.image = pygame.transform.scale(self.image, [size,size])
+        self.image = pygame.transform.scale(self.image, [tileSize,tileSize])
         self.rect = self.image.get_rect(center = pos)
