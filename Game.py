@@ -27,7 +27,7 @@ balls = [Ball("regular.png",
               random.randint(20, 100))
         ]
 
-player = Player(7, [width/15,height/9])
+player = Player(7, [width/10,height/4])
 walls = level.walls
 
 using = "keyboard"

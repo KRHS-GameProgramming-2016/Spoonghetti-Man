@@ -1,7 +1,7 @@
 import pygame, sys, math
 from Wall import *
 class Level():
-    def __init__(self, levelFile, tileSize=40):
+    def __init__(self, levelFile, tileSize=50):
         self.walls = []
         self.players = []
         self.ballSpawns = []
