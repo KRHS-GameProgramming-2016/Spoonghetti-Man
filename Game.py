@@ -24,7 +24,7 @@ level = Level("level1.lvl")
 
 player = Player(7, [width/10,height/4])
 walls = level.walls
-meatballs = level.meatballs
+meatball = level.meatball
 
 using = "keyboard"
 lev = 1
@@ -58,7 +58,7 @@ while True:
     
 
     
-    #for ball in meatballs:
+    #for ball in meatball:
         #ball.move()
         #ball.bounceScreen(size)
         
@@ -67,17 +67,17 @@ while True:
     for wall in walls:
         player.bounceWall(wall)
     
-    for hitter in meatballs:
-        for hittie in meatballs:
+    for hitter in meatball:
+        for hittie in meatball:
             if hitter != hittie:
                 hitter.bounceBall(hittie)
         if player.bounceBall(hitter):
-            meatballs.remove(hitter)
+            meatball.remove(hitter)
     
     bgColor = r,g,b
     screen.fill(bgColor)
     screen.blit(bgImage, bgRect)
-    for ball in meatballs:
+    for ball in meatball:
         screen.blit(ball.image, ball.rect)
     screen.blit(player.image, player.rect)
     for wall in walls:
