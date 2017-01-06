@@ -1,6 +1,6 @@
 import pygame, sys, math
 
-class Ball():
+class Meatball():
     def __init__(self, image, speed=[0,0], pos=[0,0], size=None):
         self.image = pygame.image.load("rsc/ball/"+image)
         if size:

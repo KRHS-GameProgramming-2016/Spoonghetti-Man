@@ -1,22 +1,26 @@
 import pygame, sys, math
 from Player  import *
 from Wall import *
+from Meatball import *
 class Level():
     def __init__(self, levelFile, tileSize=25):
         self.walls = []
-        self.balls = []
+        self.meatballs = []
         self.tileSize = tileSize
         self.player = None
         self.loadLevel(levelFile)
+        print "huh???"
     
     def unloadLevel(self):
         self.walls = []
       
                
     def loadLevel(self, levelFile):        
-        f = open("Resources/levels/"+levelFile, 'r')
+        f = open("rsc/levels/"+levelFile, 'r')
         lines = f.readlines()
         f.close()
+        
+        print "Please??"
         
         """
         print lines
@@ -43,20 +47,22 @@ class Level():
         for y,line in enumerate(lines):
             for x,c in enumerate(line):
                 if c == '#':
-                    self.walls += [Wall("wall.png",
-                                        [x*self.tileSize + self.tileSize/2,
-                                         y*self.tileSize + self.tileSize/2],
-                                        self.tileSize)
+                    self.walls += [Wall([x*self.tileSize + self.tileSize/15,
+                                        y*self.tileSize + self.tileSize/15],
+                                       self.tileSize)
                                   ]
                 if c == "@":
                     self.player = Player([x*self.tileSize + self.tileSize/2,
                                           y*self.tileSize + self.tileSize/2],
                                           self.tileSize)
                 if c == "o":
-                    self.meatballs += [Meatball([x*self.tileSize + self.tileSize/2,
-                                          y*self.tileSize + self.tileSize/2],
+                    self.meatballs += [Meatball("regular.png",
+                                          [0,0]
+                                          [x*self.tileSize + self.tileSize/2,
+                                           y*self.tileSize + self.tileSize/2],
                                           self.tileSize)
                                   ]
+                    print "MEAATBALL!!!!"
 
         
 #Level("level1.lvl")
