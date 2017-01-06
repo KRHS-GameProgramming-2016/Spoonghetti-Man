@@ -21,14 +21,10 @@ bgRect = bgImage.get_rect()
 
 level = Level("level1.lvl")
 
-balls = [Ball("regular.png",
-              [random.randint(1, 10), random.randint(1, 10)],
-              [random.randint(0, width-100), random.randint(0, height-100)],
-              random.randint(20, 100))
-        ]
 
 player = Player(7, [width/10,height/4])
 walls = level.walls
+meatballs = level.meatballs
 
 using = "keyboard"
 lev = 1
@@ -60,22 +56,9 @@ while True:
                 pygame.mouse.set_visible(False)
                 player.goMouse(event.pos)
     
-    if len(balls) == 0:
-        lev += 1
-        for b in range(lev):
-            balls += [Ball("spicy.png",
-                  [random.randint(1, 10), random.randint(1, 10)],
-                  [random.randint(0, width-100), random.randint(0, height-100)],
-                  random.randint(20, 100))
-            ]
-        for b in range(lev*2):
-            balls += [Ball("regular.png",
-                  [random.randint(1, 10), random.randint(1, 10)],
-                  [random.randint(0, width-100), random.randint(0, height-100)],
-                  random.randint(20, 100))
-            ]
+
     
-    #for ball in balls:
+    #for ball in meatballs:
         #ball.move()
         #ball.bounceScreen(size)
         
@@ -84,17 +67,17 @@ while True:
     for wall in walls:
         player.bounceWall(wall)
     
-    for hitter in balls:
-        for hittie in balls:
+    for hitter in meatballs:
+        for hittie in meatballs:
             if hitter != hittie:
                 hitter.bounceBall(hittie)
         if player.bounceBall(hitter):
-            balls.remove(hitter)
+            meatballs.remove(hitter)
     
     bgColor = r,g,b
     screen.fill(bgColor)
     screen.blit(bgImage, bgRect)
-    for ball in balls:
+    for ball in meatballs:
         screen.blit(ball.image, ball.rect)
     screen.blit(player.image, player.rect)
     for wall in walls:
