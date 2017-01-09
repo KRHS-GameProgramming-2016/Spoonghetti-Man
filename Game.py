@@ -1,6 +1,6 @@
 import pygame, sys, math, random
 from Meatball import *
-from spawn import *
+from Level import *
 from Player import *
 from specialmeatball import *
 from spicymeatball import *
@@ -20,7 +20,7 @@ bgImage = pygame.image.load("Background/YELLOW.png").convert()
 bgRect = bgImage.get_rect() 
 
 level = Level("level1.lvl")
-
+print level
 
 player = Player(7, [width/10,height/4])
 walls = level.walls
@@ -58,21 +58,21 @@ while True:
     
 
     
-    #for ball in meatball:
-        #ball.move()
-        #ball.bounceScreen(size)
+    #for meatball in meatballs:
+        #meatball.move()
+        #meatball.bounceScreen(size)
         
     player.move()
     player.bounceScreen(size)
     for wall in walls:
         player.bounceWall(wall)
     
-    for hitter in meatball:
-        for hittie in meatball:
+    for hitter in meatballs:
+        for hittie in meatballs:
             if hitter != hittie:
-                hitter.bounceBall(hittie)
-        if player.bounceBall(hitter):
-            meatball.remove(hitter)
+                hitter.bounceMeatball(hittie)
+        if player.bounceMeatball(hitter):
+            meatballs.remove(hitter)
     
     bgColor = r,g,b
     screen.fill(bgColor)

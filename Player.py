@@ -1,7 +1,7 @@
 import pygame, sys, math
 from Meatball import *
 
-class Player(Ball):
+class Player(Meatball):
     def __init__(self, maxSpeed =5 , pos=[0,-5]):
         Ball.__init__(self, "Spony.png", [0,-5], pos, None)
         self.maxSpeed = maxSpeed     
