@@ -17,14 +17,14 @@ screen = pygame.display.set_mode(size)
 
 bgColor = r,g,b = 0, 0, 0
 bgImage = pygame.image.load("Background/YELLOW.png").convert()
-bgRect = bgImage.get_rect()
+bgRect = bgImage.get_rect() 
 
 level = Level("level1.lvl")
 
 
 player = Player(7, [width/10,height/4])
 walls = level.walls
-meatball = level.meatball
+meatball = level.meatballs
 
 using = "keyboard"
 lev = 1
@@ -77,7 +77,7 @@ while True:
     bgColor = r,g,b
     screen.fill(bgColor)
     screen.blit(bgImage, bgRect)
-    for ball in meatball:
+    for meatball in meatball:
         screen.blit(ball.image, ball.rect)
     screen.blit(player.image, player.rect)
     for wall in walls:

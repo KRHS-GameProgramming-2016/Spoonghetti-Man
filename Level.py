@@ -53,7 +53,7 @@ class Level():
                                           y*self.tileSize + self.tileSize/2],
                                           self.tileSize)
                 if c == "o":
-                    self.meatballs += [Meatball([x*self.tileSize + self.tileSize/2,
+                    self.meatball += [Meatball([x*self.tileSize + self.tileSize/2,
                                           y*self.tileSize + self.tileSize/2],
                                           self.tileSize)
                                   ]
