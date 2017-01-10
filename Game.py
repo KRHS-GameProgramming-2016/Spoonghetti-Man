@@ -55,8 +55,7 @@ while True:
     print player.speed
     player.bounceScreen(size)
     for wall in walls:
-        pass
-        #player.bounceWall(wall)
+        player.bounceWall(wall)
     
     bgColor = r,g,b
     screen.fill(bgColor)
