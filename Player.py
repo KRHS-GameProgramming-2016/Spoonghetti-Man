@@ -3,7 +3,7 @@ from Meatball import *
 
 class Player(Meatball):
     def __init__(self, maxSpeed =5 , pos=[0,-5]):
-        Meatball.__init__(self, "Spony.png", [0,-5], pos, None)
+        Ball.__init__(self, "Spony.png", [0,-5], pos, None)
         self.maxSpeed = maxSpeed     
         self.images = [pygame.image.load("rsc/ball/Spoony111.png"),
                        pygame.image.load("rsc/ball/Spoony111.png")
@@ -14,7 +14,7 @@ class Player(Meatball):
         self.animationTimerMax = .2 * 60 #seconds * 60 fps
         
     def move(self):
-        Meatball.move(self)
+        Ball.move(self)
         self.animate()
         
     def animate(self):
@@ -64,7 +64,7 @@ class Player(Meatball):
             self.speedy = 0
             self.didBounceY = True
             
-    def bounceMeatball(self, other):
+    def bounceBall(self, other):
         if self.rect.right > other.rect.left and self.rect.left < other.rect.right:
             if self.rect.bottom > other.rect.top and self.rect.top < other.rect.bottom:
                 if self.dist(other.rect.center) < self.radius + other.radius:
