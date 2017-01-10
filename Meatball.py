@@ -30,7 +30,7 @@ class Meatball():
             self.speedy = -self.speedy
             self.didBounceY = True
             
-    def bounceBall(self, other):
+    def bounceMeatball(self, other):
         if self.rect.right > other.rect.left and self.rect.left < other.rect.right:
             if self.rect.bottom > other.rect.top and self.rect.top < other.rect.bottom:
                 if self.dist(other.rect.center) < self.radius + other.radius:

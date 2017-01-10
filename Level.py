@@ -3,7 +3,7 @@ from Player  import *
 from Wall import *
 from Meatball import *
 class Level():
-    def __init__(self, levelFile, tileSize=25):
+    def __init__(self, levelFile, tileSize=50):
         self.walls = []
         self.meatballs = []
         self.tileSize = tileSize
@@ -54,7 +54,7 @@ class Level():
                                           self.tileSize)
                 if c == "o":
                     self.meatballs += [Meatball("regular.png",
-                                          [0,0]
+                                          [0,0],
                                           [x*self.tileSize + self.tileSize/2,
                                            y*self.tileSize + self.tileSize/2],
                                           self.tileSize)
