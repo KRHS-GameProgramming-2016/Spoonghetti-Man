@@ -25,7 +25,7 @@ print level
 player = Player(7, [width/2,height/2])
 walls = level.walls
 meatballs = level.meatballs
-print len(meatballs)
+#print len(meatballs)
 
 lev = 1
 
