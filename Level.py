@@ -48,10 +48,13 @@ class Level():
                                         y*self.tileSize + self.tileSize/15],
                                        self.tileSize)
                                   ]
-                if c == "@":
-                    self.player = Player([x*self.tileSize + self.tileSize/2,
-                                          y*self.tileSize + self.tileSize/2],
-                                          self.tileSize)
+                if x == "p":
+                    self.player += [Player ("spony.png",
+                                        [0,0]  
+                                        [x*self.tileSize + self.tileSize/.5,
+                                         y*self.tileSize + self.tileSize/.5],
+                                        self.tileSize)
+                                 ]
                 if c == "o":
                     self.meatballs += [Meatball("regular.png",
                                           [0,0],
