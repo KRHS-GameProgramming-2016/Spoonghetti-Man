@@ -56,6 +56,13 @@ while True:
     player.bounceScreen(size)
     for wall in walls:
         player.bounceWall(wall)
+     
+    for hitter in meatballs:
+        for hittie in meatballs:
+            if hitter != hittie:
+                hitter.bounceMeatball(hittie)
+        if player.bounceMeatball(hitter):
+            meatballs.remove(hitter)
     
     bgColor = r,g,b
     screen.fill(bgColor)
