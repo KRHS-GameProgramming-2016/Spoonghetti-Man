@@ -61,6 +61,12 @@ class Level():
                                           [x*self.tileSize + self.tileSize/2,
                                            y*self.tileSize + self.tileSize/2],
                                           self.tileSize)
+                if c == "s":
+                    self.meatballs += [specialmeatball("spicy.png",
+                                          [0,0],
+                                          [x*self.tileSize + self.tileSize/2,
+                                           y*self.tileSize + self.tileSize/2],
+                                          self.tileSize)
                                   ]
                     print "MEAATBALL!!!!"
 
