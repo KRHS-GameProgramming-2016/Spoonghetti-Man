@@ -2,6 +2,7 @@ import pygame, sys, math
 from Player  import *
 from Wall import *
 from Meatball import *
+from specialmeatball import *
 class Level():
     def __init__(self, levelFile, tileSize=50):
         self.walls = []
@@ -61,8 +62,9 @@ class Level():
                                           [x*self.tileSize + self.tileSize/2,
                                            y*self.tileSize + self.tileSize/2],
                                           self.tileSize)
+                                ]
                 if c == "s":
-                    self.meatballs += [specialmeatball("spicy.png",
+                    self.meatballs += [Specialmeatball("spicy.png",
                                           [0,0],
                                           [x*self.tileSize + self.tileSize/2,
                                            y*self.tileSize + self.tileSize/2],

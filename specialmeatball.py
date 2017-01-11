@@ -1,6 +1,6 @@
 import pygame, sys, math
 
-class Ball():
+class Specialmeatball():
     def __init__(self, image, speed=[0,0], pos=[0,0], size=None):
         self.image = pygame.image.load("rsc/ball/"+image)
         if size:
@@ -30,7 +30,7 @@ class Ball():
             self.speedy = -self.speedy
             self.didBounceY = True
             
-    def bounceBall(self, other):
+    def bounceSpecialmeatball(self, other):
         if self.rect.right > other.rect.left and self.rect.left < other.rect.right:
             if self.rect.bottom > other.rect.top and self.rect.top < other.rect.bottom:
                 if self.dist(other.rect.center) < self.radius + other.radius:
