@@ -60,7 +60,7 @@ while True:
     for hitter in meatballs:
         for hittie in meatballs:
             if hitter != hittie:
-                hitter.Meatball(hittie)
+                hitter.bounceMeatball(hittie)
         if player.bounceMeatball(hitter):
             meatballs.remove(hitter)
     
