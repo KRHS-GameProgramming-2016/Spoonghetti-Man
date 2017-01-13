@@ -16,7 +16,7 @@ class Player(Meatball):
                        pygame.image.load("rsc/ball/SpoonerF(5).png"),
                        pygame.image.load("rsc/ball/SpoonerF(4).png"),
                        pygame.image.load("rsc/ball/SpoonerF(3.1).png"),
-                       pygame.image.load("rsc/ball/SpoonerF(2).png"),
+                       pygame.image.load("rsc/ball/SpoonerF(2).png")
                       ]
         self.frame = 0
         self.maxFrame = len(self.images) - 1
