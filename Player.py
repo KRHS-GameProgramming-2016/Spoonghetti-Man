@@ -5,13 +5,23 @@ class Player(Meatball):
     def __init__(self, maxSpeed =5 , pos=[10,10]):
         Meatball.__init__(self, "spoonerF.png", [0,-5], pos, None)
         self.maxSpeed = maxSpeed     
-        self.images = [pygame.image.load("rsc/ball/spoonerF.png"),
-                       pygame.image.load("rsc/ball/spoonerF.png")
+        self.images = [pygame.image.load("rsc/ball/SpoonerF.png"),
+                       pygame.image.load("rsc/ball/SpoonerF(2).png"),
+                       pygame.image.load("rsc/ball/SpoonerF(3.1).png"),
+                       pygame.image.load("rsc/ball/SpoonerF(4).png"),
+                       pygame.image.load("rsc/ball/SpoonerF(5).png"),
+                       pygame.image.load("rsc/ball/SpoonerF(6).png"),
+                       pygame.image.load("rsc/ball/SpoonerF(7).png"),
+                       pygame.image.load("rsc/ball/SpoonerF(6).png"),
+                       pygame.image.load("rsc/ball/SpoonerF(5).png"),
+                       pygame.image.load("rsc/ball/SpoonerF(4).png"),
+                       pygame.image.load("rsc/ball/SpoonerF(3.1).png"),
+                       pygame.image.load("rsc/ball/SpoonerF(2).png"),
                       ]
         self.frame = 0
         self.maxFrame = len(self.images) - 1
         self.animationTimer = 0
-        self.animationTimerMax = .2 * 60 #seconds * 60 fps
+        self.animationTimerMax = .001 * 100 #seconds * 60 fps
         
     def move(self):
         Meatball.move(self)
