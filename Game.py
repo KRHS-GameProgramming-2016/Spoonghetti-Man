@@ -5,6 +5,7 @@ from Player import *
 from specialmeatball import *
 from spicymeatball import *
 from spoonghettimonster import *
+from spoonghettimonster import *
 from Wall import*  
 pygame.init()
 
@@ -19,7 +20,7 @@ bgColor = r,g,b = 0, 0, 0
 bgImage = pygame.image.load("Background/YELLOW.png").convert()
 bgRect = bgImage.get_rect() 
 
-level = Level("level1.lvl")
+level = Level("level1.lvl")                                                                                                                                                                                             
 print level
 
 player = Player(7, [width/2,height/2])
