@@ -1,1 +1,5 @@
-def scoreboard
+heks no
+import pygame, sys, math, random
+from spicymeatball import *
+blargle
+
