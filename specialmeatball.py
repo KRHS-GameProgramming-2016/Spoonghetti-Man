@@ -31,7 +31,7 @@ class Specialmeatball():
             self.didBounceY = True
             
     def bounceSpecialmeatball(self, other):
-        if self.rect.righ t > other.rect.left and self.rect.left < other.rect.right:
+        if self.rect.right > other.rect.left and self.rect.left < other.rect.right:
             if self.rect.bottom > other.rect.top and self.rect.top < other.rect.bottom:
                 if self.dist(other.rect.center) < self.radius + other.radius:
                     if not self.didBounceX:
