@@ -23,7 +23,7 @@ bgRect = bgImage.get_rect()
 level = Level("level1.lvl")                                                                                                                                                                                             
 print level
 
-player = Player(7, [width/2,height/2])
+player = level.player
 walls = level.walls
 meatballs = level.meatballs
 #print len(meatballs)
