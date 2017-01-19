@@ -67,9 +67,9 @@ while True:
     screen.blit(bgImage, bgRect)
     for meatball in meatballs:
         screen.blit(meatball.image, meatball.rect)
-    screen.blit(player.image, player.rect)
     for wall in walls:
         screen.blit(wall.image, wall.rect)
+    screen.blit(player.image, player.rect)
     pygame.display.flip()
     clock.tick(60)
     
