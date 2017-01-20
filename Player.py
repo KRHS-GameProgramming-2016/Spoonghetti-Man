@@ -5,18 +5,18 @@ class Player(Meatball):
     def __init__(self, maxSpeed =5 , pos=[10,10]):
         Meatball.__init__(self, "spoonerF.png", [0,-5], pos, None)
         self.maxSpeed = maxSpeed     
-        self.images = [pygame.transform.scale(pygame.image.load("rsc/ball/SpoonerF.png"), [50,50]),
-                       pygame.transform.scale(pygame.image.load("rsc/ball/SpoonerF(2).png"), [50,50]),
-                       pygame.transform.scale(pygame.image.load("rsc/ball/SpoonerF(3.1).png"), [50,50]),
-                       pygame.transform.scale(pygame.image.load("rsc/ball/SpoonerF(4).png"), [50,50]),
-                       pygame.transform.scale(pygame.image.load("rsc/ball/SpoonerF(5).png"), [50,50]),
-                       pygame.transform.scale(pygame.image.load("rsc/ball/SpoonerF(6).png"), [50,50]),
-                       pygame.transform.scale(pygame.image.load("rsc/ball/SpoonerF(7).png"), [50,50]),
-                       pygame.transform.scale(pygame.image.load("rsc/ball/SpoonerF(6).png"), [50,50]),
-                       pygame.transform.scale(pygame.image.load("rsc/ball/SpoonerF(5).png"), [50,50]),
-                       pygame.transform.scale(pygame.image.load("rsc/ball/SpoonerF(4).png"), [50,50]),
-                       pygame.transform.scale(pygame.image.load("rsc/ball/SpoonerF(3.1).png"), [50,50]),
-                       pygame.transform.scale(pygame.image.load("rsc/ball/SpoonerF(2).png"), [50,50]),
+        self.images = [pygame.transform.scale(pygame.image.load("rsc/ball/SpoonerF.png"), [70,70]),
+                       pygame.transform.scale(pygame.image.load("rsc/ball/SpoonerF(2).png"), [70,70]),
+                       pygame.transform.scale(pygame.image.load("rsc/ball/SpoonerF(3.1).png"), [70,70]),
+                       pygame.transform.scale(pygame.image.load("rsc/ball/SpoonerF(4).png"), [70,70]),
+                       pygame.transform.scale(pygame.image.load("rsc/ball/SpoonerF(5).png"), [70,70]),
+                       pygame.transform.scale(pygame.image.load("rsc/ball/SpoonerF(6).png"), [70,70]),
+                       pygame.transform.scale(pygame.image.load("rsc/ball/SpoonerF(7).png"), [70,70]),
+                       pygame.transform.scale(pygame.image.load("rsc/ball/SpoonerF(6).png"), [70,70]),
+                       pygame.transform.scale(pygame.image.load("rsc/ball/SpoonerF(5).png"), [70,70]),
+                       pygame.transform.scale(pygame.image.load("rsc/ball/SpoonerF(4).png"), [70,70]),
+                       pygame.transform.scale(pygame.image.load("rsc/ball/SpoonerF(3.1).png"), [70,70]),
+                       pygame.transform.scale(pygame.image.load("rsc/ball/SpoonerF(2).png"), [70,70]),
                       ]
         self.frame = 0
         self.image = self.images[self.frame]
