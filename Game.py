@@ -5,13 +5,13 @@ from Player import *
 from specialmeatball import *
 from spicymeatball import *
 from spoonghettimonster import *
-from spoonghettimonster import *
 from Wall import*  
+from Timer import*
 pygame.init()
 
 clock = pygame.time.Clock()
 
-width = 1000 
+width = 1290 
 height = 700
 size = width, height
 screen = pygame.display.set_mode(size)
@@ -26,6 +26,7 @@ print level
 player = level.player
 walls = level.walls
 meatballs = level.meatballs
+timer = Timer([width/2, 50])
 #print len(meatballs)
 
 lev = 1
@@ -57,6 +58,8 @@ while True:
     player.bounceScreen(size)
     for wall in walls:
         player.bounceWall(wall)
+        
+    timer.update()
      
     for meatball in meatballs:
         if player.bounceMeatball(meatball):
@@ -70,6 +73,7 @@ while True:
     for wall in walls:
         screen.blit(wall.image, wall.rect)
     screen.blit(player.image, player.rect)
+    screen.blit(timer.image, timer.rect)
     pygame.display.flip()
     clock.tick(60)
     
