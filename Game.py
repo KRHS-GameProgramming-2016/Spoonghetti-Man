@@ -28,6 +28,8 @@ player2 = level.player2
 walls = level.walls
 meatballs = level.meatballs
 timer = Timer([width/2, 50])
+score = Score([100, height - 30])
+score2 = Score([width - 100, height - 30])
 #print len(meatballs)
 
 lev = 1
@@ -85,8 +87,11 @@ while True:
     for meatball in meatballs:
         if player.bounceMeatball(meatball):
             meatballs.remove(meatball)
+            score.setValue(player.points)
         if player2.bounceMeatball(meatball):
             meatballs.remove(meatball)
+            score2.setValue(player2.points)
+    
     
     bgColor = r,g,b
     screen.fill(bgColor)
@@ -98,6 +103,8 @@ while True:
     screen.blit(player.image, player.rect)
     screen.blit(player2.image, player2.rect)
     screen.blit(timer.image, timer.rect)
+    screen.blit(score.image, score.rect)
+    screen.blit(score2.image, score2.rect)
     pygame.display.flip()
     clock.tick(60)
     

@@ -12,6 +12,7 @@ class Specialmeatball():
         self.radius = self.rect.width/2 -1
         self.didBounceX = False
         self.didBounceY = False
+        self.points = 2
 
         
     def move(self):

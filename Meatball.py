@@ -12,6 +12,7 @@ class Meatball():
         self.radius = self.rect.width/2 -1
         self.didBounceX = False
         self.didBounceY = False
+        self.points = 1
 
         
     def move(self):

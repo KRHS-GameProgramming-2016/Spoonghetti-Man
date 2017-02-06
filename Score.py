@@ -14,4 +14,11 @@ class Score():
             self.value = 0
         self.image = self.font.render("Score: " + str(self.value), True, (100,0,30))
         self.rect = self.image.get_rect(center = self.rect.center)
+        
+    def setValue(self, amount = 0):
+        self.value = amount
+        if self.value <= 0:
+            self.value = 0
+        self.image = self.font.render("Score: " + str(self.value), True, (100,0,30))
+        self.rect = self.image.get_rect(center = self.rect.center)
 

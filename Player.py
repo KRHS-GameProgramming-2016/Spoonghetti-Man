@@ -24,6 +24,7 @@ class Player(Meatball):
         self.maxFrame = len(self.images) - 1
         self.animationTimer = 0
         self.animationTimerMax = .001 * 100 #seconds * 60 fps
+        self.points = 0
         
     def move(self):
         Meatball.move(self)
@@ -80,6 +81,7 @@ class Player(Meatball):
         if self.rect.right > other.rect.left and self.rect.left < other.rect.right:
             if self.rect.bottom > other.rect.top and self.rect.top < other.rect.bottom:
                 if self.dist(other.rect.center) < self.radius + other.radius:
+                    self.points += other.points
                     return True
         return False
         
