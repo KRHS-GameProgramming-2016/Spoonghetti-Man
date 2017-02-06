@@ -17,7 +17,7 @@ size = width, height
 screen = pygame.display.set_mode(size)
 
 bgColor = r,g,b = 0, 0, 0
-bgImage = pygame.image.load("Background/YELLOW.png").convert()
+bgImage = pygame.image.load("Background/spagootie.jpg").convert()
 bgRect = bgImage.get_rect() 
 
 level = Level("level1.lvl")                                                                                                                                                                                             
