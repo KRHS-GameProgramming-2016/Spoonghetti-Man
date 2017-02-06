@@ -3,7 +3,7 @@ from Score import *
 
 class Timer(Score):
     def __init__(self, pos):
-        Score.__init__(self, pos=[132,50])
+        Score.__init__(self, pos)
         self.startTime = time.clock()
         self.image = self.font.render("Time: " + str(self.value), True, (0,0,0))
         self.rect = self.image.get_rect(center = self.rect.center)

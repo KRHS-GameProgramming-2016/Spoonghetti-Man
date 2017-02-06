@@ -27,7 +27,7 @@ player = level.player
 player2 = level.player2
 walls = level.walls
 meatballs = level.meatballs
-timer = Timer([width/2, 50])
+timer = Timer([132, 50])
 score = Score([100, height - 30])
 score2 = Score([width - 100, height - 30])
 #print len(meatballs)
