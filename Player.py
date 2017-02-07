@@ -2,7 +2,7 @@ import pygame, sys, math
 from Meatball import *
 
 class Player(Meatball):
-    def __init__(self, maxSpeed =5 , pos=[10,10]):
+    def __init__(self, maxSpeed =5 , pos=[0,0]):
         Meatball.__init__(self, "spoonerF.png", [0,-5], pos, None)
         self.maxSpeed = maxSpeed     
         self.images = [pygame.transform.scale(pygame.image.load("rsc/ball/SpoonerF.png"), [70,70]),
