@@ -21,7 +21,7 @@ bgImage = pygame.image.load("Background/spagootie.jpg").convert()
 bgRect = bgImage.get_rect() 
 
 level = Level("level1.lvl")                                                                                                                                                                                             
-print level
+
 
 player = level.player
 player2 = level.player2
