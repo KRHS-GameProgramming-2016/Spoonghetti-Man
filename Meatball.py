@@ -13,6 +13,10 @@ class Meatball():
         self.didBounceX = False
         self.didBounceY = False
         self.points = 1
+        self.living = True
+        
+    def kill(self):
+        self.living = False
 
         
     def move(self):
