@@ -45,8 +45,8 @@ class Level():
         for y,line in enumerate(lines):
             for x,c in enumerate(line):
                 if c == '#':
-                    self.walls += [Wall([x*self.tileSize + self.tileSize/15,
-                                        y*self.tileSize + self.tileSize/15],
+                    self.walls += [Wall([x*self.tileSize + self.tileSize/7,
+                                        y*self.tileSize + self.tileSize/7],
                                        self.tileSize)
                                   ]
                                   
