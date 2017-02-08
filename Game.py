@@ -21,7 +21,7 @@ bgImage = pygame.image.load("Background/spagootie.jpg").convert()
 bgRect = bgImage.get_rect() 
 
 level = Level("level1.lvl")                                                                                                                                                                                             
-
+print level
 
 player = level.player
 player2 = level.player2
@@ -86,12 +86,15 @@ while True:
      
     for meatball in meatballs:
         if player.bounceMeatball(meatball):
-            meatballs.remove(meatball)
+            meatball.kill()
             score.setValue(player.points)
         if player2.bounceMeatball(meatball):
-            meatballs.remove(meatball)
             score2.setValue(player2.points)
-    
+            meatball.kill()
+            
+    for meatball in meatballs:
+        if not meatball.living:
+            meatballs.remove(meatball)
     
     bgColor = r,g,b
     screen.fill(bgColor)
@@ -112,3 +115,4 @@ while True:
     
     
     
+ddddddd
