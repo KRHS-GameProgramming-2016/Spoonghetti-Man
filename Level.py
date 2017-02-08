@@ -51,7 +51,7 @@ class Level():
                                   ]
                                   
                 if c == "b":
-                    self.player2 = Player (100,
+                    self.player2 = Player (5,
                                         [x*self.tileSize + self.tileSize/.5,
                                          y*self.tileSize + self.tileSize/.5])
                 if c == "p":
