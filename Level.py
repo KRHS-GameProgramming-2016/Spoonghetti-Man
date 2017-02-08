@@ -59,16 +59,12 @@ class Level():
                                         [x*self.tileSize + self.tileSize/.5,
                                          y*self.tileSize + self.tileSize/.5])
                 if c == "o":
-                    self.meatballs += [Meatball("regular.png",
-                                          [0,0],
-                                          [x*self.tileSize + self.tileSize/2,
+                    self.meatballs += [Meatball([x*self.tileSize + self.tileSize/2,
                                            y*self.tileSize + self.tileSize/2],
                                           self.tileSize)
                                 ]
                 if c == "s":
-                    self.meatballs += [Specialmeatball("spicy.png",
-                                          [0,0],
-                                          [x*self.tileSize + self.tileSize/2,
+                    self.meatballs += [Specialmeatball([x*self.tileSize + self.tileSize/2,
                                            y*self.tileSize + self.tileSize/2],
                                           self.tileSize)
                                 ]
