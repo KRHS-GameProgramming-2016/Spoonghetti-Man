@@ -95,6 +95,9 @@ while True:
     for meatball in meatballs:
         if not meatball.living:
             meatballs.remove(meatball)
+            
+    if len(meatballs) == 0:
+        pass
     
     bgColor = r,g,b
     screen.fill(bgColor)
