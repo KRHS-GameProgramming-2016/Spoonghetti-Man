@@ -97,7 +97,13 @@ while True:
             meatballs.remove(meatball)
             
     if len(meatballs) == 0:
-        pass
+        level.unloadLevel()
+        levelNumber += 1
+        level.loadLevel("level"+str(levelNumber)+".lvl")
+        walls = level.walls
+        player = level.player
+        goal = level.goal
+        levelIndicator.set(levelNumber)
     
     bgColor = r,g,b
     screen.fill(bgColor)
@@ -113,9 +119,4 @@ while True:
     screen.blit(score2.image, score2.rect)
     pygame.display.flip()
     clock.tick(60)
-    
-    
-    
-    
-    
-ddddddd
+
