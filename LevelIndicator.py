@@ -13,3 +13,8 @@ class Timer(Score):
             self.value = newValue
             self.image = self.font.render("Time: " + str(self.value), True, (255,0,0))
             self.rect = self.image.get_rect(center = self.rect.center)
+    
+    def set(self, amount = 1):
+        self.value = amount
+        self.image = self.font.render("Level: " + str(self.value), True, (255,0,0))
+        #self.rect = self.image.get_rect(topright = self.rect.topright)
