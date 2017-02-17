@@ -7,6 +7,8 @@ from spicymeatball import *
 from Wall import*  
 from Timer import*
 from Spoonghettimonster import *
+#from LevelIndicator import *
+#from Goal import *
 pygame.init()
 
 clock = pygame.time.Clock()
@@ -20,12 +22,16 @@ bgColor = r,g,b = 0, 0, 0
 bgImage = pygame.image.load("Background/spagootie.jpg").convert()
 bgRect = bgImage.get_rect() 
 
+#levelNumber = 1
+#levelIndicator = LevelIndicator([width-10, 10], levelNumber)
+
 level = Level("level1.lvl")                                                                                                                                                                                             
 print level
 
 player = level.player
 player2 = level.player2
 walls = level.walls
+#goal = level.goal
 meatballs = level.meatballs
 timer = Timer([132, 50])
 score = Score([100, height - 30])

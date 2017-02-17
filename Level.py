@@ -69,6 +69,11 @@ class Level():
                                            y*self.tileSize + self.tileSize/2],
                                           self.tileSize)
                                 ]
+                #if c == "$":
+                    #self.goal = Goal([x*self.tileSize + self.tileSize/2,
+                                          #y*self.tileSize + self.tileSize/2],
+                                          #self.tileSize)
+                   
                     print "MEAATBALL!!!!"
 
         

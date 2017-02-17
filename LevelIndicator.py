@@ -1,18 +1,15 @@
-import pygame, sys, math, time
+import pygame, sys, math 
 
-class Timer(Score):
-    def __init__(self, pos):
-        Score.__init__(self, pos)
-        self.startTime = time.clock()
-        self.image = self.font.render("Time: " + str(self.value), True, (255,0,0))
-        self.rect = self.image.get_rect(center = self.rect.center)
+class LevelIndicator():
+    def __init__(self, pos, startValue):
+        self.value = startValue
+        self.image = pygame.image.load("rsc/TextBG.png")
         
-    def update(self):
-        newValue = int(time.clock() - self.startTime)
-        if newValue != self.value:
-            self.value = newValue
-            self.image = self.font.render("Time: " + str(self.value), True, (255,0,0))
-            self.rect = self.image.get_rect(center = self.rect.center)
+        #http://www.1001fonts.com/westmeath-font.html
+        self.font = pygame.font.Font("rsc/Fonts/comic sans/comic.ttf", 50)
+        self.image.blit(self.font.render("Level: " + str(self.value), True, (255,255,255)), [30,0])
+        self.rect = self.image.get_rect(topright = pos)
+        print pos, self.rect
     
     def set(self, amount = 1):
         self.value = amount
