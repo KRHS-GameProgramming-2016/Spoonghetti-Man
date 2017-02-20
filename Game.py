@@ -2,6 +2,7 @@ import pygame, sys, math, random
 from Meatball import *
 from Level import *
 from Player import *
+from AIPlayer import *
 from specialmeatball import *
 from spicymeatball import *
 from Wall import*  
@@ -52,14 +53,14 @@ while True:
                 player.go("right")
             if event.key == pygame.K_LEFT:
                 player.go("left")
-            if event.key == pygame.K_w:
-                player2.go("up")
-            if event.key == pygame.K_s:
-                player2.go("down")
-            if event.key == pygame.K_d:
-                player2.go("right")
-            if event.key == pygame.K_a:
-                player2.go("left")
+            #if event.key == pygame.K_w:
+                #player2.go("up")
+            #if event.key == pygame.K_s:
+                #player2.go("down")
+            #if event.key == pygame.K_d:
+                #player2.go("right")
+            #if event.key == pygame.K_a:
+                #player2.go("left")
         if event.type == pygame.KEYUP:
             if event.key == pygame.K_UP:
                 player.go("stop up")
@@ -69,14 +70,14 @@ while True:
                 player.go("stop right")
             if event.key == pygame.K_LEFT:
                 player.go("stop left")
-            if event.key == pygame.K_w:
-                player2.go("stop up")
-            if event.key == pygame.K_s:
-                player2.go("stop down")
-            if event.key == pygame.K_d:
-                player2.go("stop right")
-            if event.key == pygame.K_a:
-                player2.go("stop left")
+            #if event.key == pygame.K_w:
+                #player2.go("stop up")
+            #if event.key == pygame.K_s:
+                #player2.go("stop down")
+            #if event.key == pygame.K_d:
+                #player2.go("stop right")
+            #if event.key == pygame.K_a:
+                #player2.go("stop left")
             
     
     player.move()
@@ -104,8 +105,8 @@ while True:
             
     if len(meatballs) == 0:
         level.unloadLevel()
-        levelNumber += 1
-        level.loadLevel("level"+str(levelNumber)+".lvl")
+        lev += 1
+        level.loadLevel("level"+str(lev)+".lvl")
         walls = level.walls
         player = level.player
         goal = level.goal

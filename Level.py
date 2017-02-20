@@ -1,5 +1,6 @@
 import pygame, sys, math
 from Player  import *
+from AIPlayer  import *
 from Wall import *
 from Meatball import *
 from specialmeatball import *
@@ -52,7 +53,7 @@ class Level():
                                   ]
                                   
                 if c == "b":
-                    self.player2 = Player (5,
+                    self.player2 = AIPlayer (5,
                                         [x*self.tileSize + self.tileSize/.5,
                                          y*self.tileSize + self.tileSize/.5])
                 if c == "p":
