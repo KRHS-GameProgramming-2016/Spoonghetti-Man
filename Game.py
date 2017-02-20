@@ -1,6 +1,7 @@
 import pygame, sys, math, random
 from Meatball import *
 from Level import *
+from LevelIndicator import *
 from Player import *
 from AIPlayer import *
 from specialmeatball import *
@@ -26,6 +27,7 @@ bgRect = bgImage.get_rect()
 #levelNumber = 1
 #levelIndicator = LevelIndicator([width-10, 10], levelNumber)
 
+lev = 1
 level = Level("level1.lvl")                                                                                                                                                                                             
 print level
 
@@ -38,8 +40,7 @@ timer = Timer([132, 50])
 score = Score([100, height - 30])
 score2 = Score([width - 100, height - 30])
 #print len(meatballs)
-
-lev = 1
+levelIndicator = LevelIndicator([width-200, 50], lev)
 
 while True:
     for event in pygame.event.get():
@@ -109,8 +110,9 @@ while True:
         level.loadLevel("level"+str(lev)+".lvl")
         walls = level.walls
         player = level.player
-        goal = level.goal
-        levelIndicator.set(levelNumber)
+        meatballs = level.meatballs
+        #goal = level.goal
+        levelIndicator.set(lev)
     
     bgColor = r,g,b
     screen.fill(bgColor)
@@ -124,6 +126,7 @@ while True:
     screen.blit(timer.image, timer.rect)
     screen.blit(score.image, score.rect)
     screen.blit(score2.image, score2.rect)
+    screen.blit(levelIndicator.image, levelIndicator.rect)
     pygame.display.flip()
     clock.tick(60)
 

@@ -28,6 +28,6 @@ class AIPlayer(Player):
         self.speed = [0, 0]
         while self.speed == [0,0]:
             self.go(xs[random.randint(0,3)])
-            self.go(xs[random.randint(0,3)])
+            self.go(ys[random.randint(0,3)])
             self.speed = [self.speedx, self.speedy]
         
