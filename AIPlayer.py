@@ -8,7 +8,8 @@ class AIPlayer(Player):
         
         
     def update(self):
-        pass
+        if random.randint(0,75) == 0:
+            self.goRandomDirection()
         
     def bounceWall(self, other):
         if self.rect.right > other.rect.left and self.rect.left < other.rect.right:

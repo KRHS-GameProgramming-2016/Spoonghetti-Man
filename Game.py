@@ -83,6 +83,7 @@ while True:
     
     player.move()
     player2.move()
+    player2.update()
     print player.speed
     player.bounceScreen(size)
     player2.bounceScreen(size)
@@ -128,5 +129,5 @@ while True:
     screen.blit(score2.image, score2.rect)
     screen.blit(levelIndicator.image, levelIndicator.rect)
     pygame.display.flip()
-    clock.tick(60)
+    #clock.tick(60)
 
