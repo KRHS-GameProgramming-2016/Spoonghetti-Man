@@ -83,7 +83,6 @@ while True:
     
     player.move()
     player2.move()
-    player2.update()
     print player.speed
     player.bounceScreen(size)
     player2.bounceScreen(size)
