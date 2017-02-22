@@ -53,7 +53,7 @@ class Level():
                                   ]
                                   
                 if c == "b":
-                    self.player2 = AIPlayer (3,
+                    self.player2 = AIPlayer (5,
                                         [x*self.tileSize + self.tileSize/.5,
                                          y*self.tileSize + self.tileSize/.5])
                 if c == "p":
