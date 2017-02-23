@@ -40,7 +40,7 @@ timer = Timer([132, 50])
 score = Score([100, height - 30])
 score2 = Score([width - 100, height - 30])
 #print len(meatballs)
-levelIndicator = LevelIndicator([width-200, 50], lev)
+levelIndicator = LevelIndicator([width-10, 16], lev)
 
 while True:
     for event in pygame.event.get():
