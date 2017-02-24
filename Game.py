@@ -128,5 +128,5 @@ while True:
     screen.blit(score2.image, score2.rect)
     screen.blit(levelIndicator.image, levelIndicator.rect)
     pygame.display.flip()
-    #clock.tick(60)
+    clock.tick(100)
 
