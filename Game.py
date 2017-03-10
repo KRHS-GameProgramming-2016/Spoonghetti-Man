@@ -125,8 +125,6 @@ while True:
     else:
         bgImage = pygame.image.load ("levels/Player 1 wins.png")
         bgRect = bgImage.get_rect()
-    
-    lev += 1
 
     while scoreScreen:
         for event in pygame.event.get():
