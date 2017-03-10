@@ -126,13 +126,15 @@ while True:
         bgImage = pygame.image.load ("levels/Player 1 wins.png")
         bgRect = bgImage.get_rect()
     
+    lev += 1
+
     while scoreScreen:
         for event in pygame.event.get():
             if event.type == pygame.QUIT: sys.exit()
             if event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_RETURN:
                     scoreScreen = False
-        lev += 1
+        
         bgColor = r,g,b
         screen.fill(bgColor)
         screen.blit(bgImage, bgRect)
