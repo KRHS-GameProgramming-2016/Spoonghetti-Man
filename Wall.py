@@ -5,3 +5,4 @@ class Wall():
         self.image = pygame.image.load("rsc/wall/Wally.png")
         self.image = pygame.transform.scale(self.image, [tileSize,tileSize])
         self.rect = self.image.get_rect(center = pos)
+        

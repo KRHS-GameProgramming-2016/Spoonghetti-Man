@@ -4,6 +4,23 @@ from Player import *
 class AIPlayer(Player):
     def __init__(self, maxSpeed =5 , pos=[10,10]):
         Player.__init__(self, maxSpeed, pos)
+        self.images = [pygame.transform.scale(pygame.image.load("rsc/ball/SpoonerF(11).png"), size),
+                       pygame.transform.scale(pygame.image.load("rsc/ball/SpoonerF(2).png"), size),
+                       pygame.transform.scale(pygame.image.load("rsc/ball/SpoonerF(3.1).png"), size),
+                       pygame.transform.scale(pygame.image.load("rsc/ball/SpoonerF(4).png"), size),
+                       pygame.transform.scale(pygame.image.load("rsc/ball/SpoonerF(5).png"), size),
+                       pygame.transform.scale(pygame.image.load("rsc/ball/SpoonerF(6).png"), size),
+                       pygame.transform.scale(pygame.image.load("rsc/ball/SpoonerF(7).png"), size),
+                       pygame.transform.scale(pygame.image.load("rsc/ball/SpoonerF(6).png"), size),
+                       pygame.transform.scale(pygame.image.load("rsc/ball/SpoonerF(5).png"), size),
+                       pygame.transform.scale(pygame.image.load("rsc/ball/SpoonerF(4).png"), size),
+                       pygame.transform.scale(pygame.image.load("rsc/ball/SpoonerF(3.1).png"), size),
+                       pygame.transform.scale(pygame.image.load("rsc/ball/SpoonerF(2).png"), size),
+                      ]
+        self.frame = 0
+        self.image = self.images[self.frame]
+        self.rect = self.image.get_rect(center = self.rect.center)
+        self.maxFrame = len(self.images) - 1
         self.goRandomDirection()
         
         
