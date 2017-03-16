@@ -120,10 +120,10 @@ while True:
     lev += 1
     scoreScreen = True
     if score > score2:
-        bgImage = pygame.image.load ("Levels/Player 1 wins.png")
+        bgImage = pygame.image.load ("Levels/Player 2 wins2.png")
         bgRect = bgImage.get_rect()
     else:
-        bgImage = pygame.image.load ("Levels/Player 2 wins.png")
+        bgImage = pygame.image.load ("Levels/Player 1 wins.png")
         bgRect = bgImage.get_rect()
 
     while scoreScreen:
