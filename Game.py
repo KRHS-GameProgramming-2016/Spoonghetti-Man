@@ -27,7 +27,7 @@ lev = 1
 while True:
     level = Level("level"+str(lev)+".lvl")                                                                                                                                                                                             
     print level
-    bgImage = pygame.image.load("Background/spagootie.jpg").convert()
+    bgImage = pygame.image.load("Background/hdspaghet.jpg").convert()
     bgRect = bgImage.get_rect() 
     player = level.player
     player2 = level.player2
