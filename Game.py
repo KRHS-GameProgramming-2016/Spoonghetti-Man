@@ -126,11 +126,11 @@ while True:
     
     if score > score2:
         bgImage = pygame.image.load ("Background/SPOONERRRR.png")
-        gameimage = gamefont.render("Player 2 Wins!", True, (100,0,30))
+        gameimage = gamefont.render("Spoonghettiman Wins :( ", True, (100,0,00))
         bgRect = bgImage.get_rect()
     else:
         bgImage = pygame.image.load ("Background/SPOONERRRR.png")
-        gameimage = gamefont.render("Spooners Inner Demons Were Defeated! But there are more", True, (100,0,30))
+        gameimage = gamefont.render("Spooners Inner Demons Were Defeated!", True, (100,0,00))
         bgRect = bgImage.get_rect()
         
     gamerect = gameimage.get_rect(center = [width/2, height/2])
