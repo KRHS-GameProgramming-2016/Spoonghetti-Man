@@ -119,12 +119,21 @@ while True:
     level.unloadLevel()
     lev += 1
     scoreScreen = True
+    
+    gamefont = pygame.font.Font("rsc/Fonts/comic sans/comic.ttf", 51)
+    
+    
+    
     if score > score2:
-        bgImage = pygame.image.load ("Levels/Player 2 wins2.png")
+        bgImage = pygame.image.load ("Background/SPOONERRRR.png")
+        gameimage = gamefont.render("Player 2 Wins!", True, (100,0,30))
         bgRect = bgImage.get_rect()
     else:
-        bgImage = pygame.image.load ("Levels/Player 1 wins.png")
+        bgImage = pygame.image.load ("Background/SPOONERRRR.png")
+        gameimage = gamefont.render("Spooners Inner Demons Were Defeated! But there are more", True, (100,0,30))
         bgRect = bgImage.get_rect()
+        
+    gamerect = gameimage.get_rect(center = [width/2, height/2])
 
     while scoreScreen:
         for event in pygame.event.get():
@@ -136,5 +145,6 @@ while True:
         bgColor = r,g,b
         screen.fill(bgColor)
         screen.blit(bgImage, bgRect)
+        screen.blit(gameimage, gamerect)
         pygame.display.flip()
         clock.tick(100)
