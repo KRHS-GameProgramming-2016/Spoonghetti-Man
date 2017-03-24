@@ -5,20 +5,20 @@ class Score():
         self.value = 0
         #http://www.1001fonts.com/bustin-jieber-font.html
         self.font = pygame.font.Font("rsc/Fonts/comic sans/comic.ttf", 51)
-        self.image = self.font.render("Score: " + str(self.value), True, (100,0,30))
+        self.image = self.font.render("Score: " + str(self.value), True, (100,0,00))
         self.rect = self.image.get_rect(center = pos)
     
     def change(self, amount = 1):
         self.value += amount
         if self.value <= 0:
             self.value = 0
-        self.image = self.font.render("Score: " + str(self.value), True, (100,0,30))
+        self.image = self.font.render("Score: " + str(self.value), True, (100,0,00))
         self.rect = self.image.get_rect(center = self.rect.center)
         
     def setValue(self, amount = 0):
         self.value = amount
         if self.value <= 0:
             self.value = 0
-        self.image = self.font.render("Score: " + str(self.value), True, (100,0,30))
+        self.image = self.font.render("Score: " + str(self.value), True, (100,0,00))
         self.rect = self.image.get_rect(center = self.rect.center)
 

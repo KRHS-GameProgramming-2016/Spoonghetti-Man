@@ -27,6 +27,20 @@ class AIPlayer(Player):
     def update(self):
         if random.randint(0,75) == 0:
             self.goRandomDirection()
+            
+    def PlayerCollide(self, other):
+        if self.rect.right > other.rect.left and self.rect.left < other.rect.right:
+                if self.rect.bottom > other.rect.top and self.rect.top < other.rect.bottom:
+                    self.hit = True
+                    #self.speedx = -self.speedx
+                    #self.move()
+                    #self.speedy = 0
+                    #self.didBounceX = True
+                    #if not self.didBounceY:
+                        #self.speedy = -self.speedy
+                        #self.move()
+                        #self.speedx = 0
+                        #self.didBounceX = True
         
     def bounceWall(self, other):
         if self.rect.right > other.rect.left and self.rect.left < other.rect.right:
