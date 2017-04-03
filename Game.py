@@ -122,7 +122,7 @@ while True:
     
     gamefont = pygame.font.Font("rsc/Fonts/comic sans/comic.ttf", 51)
     
-    
+    gamerect = gameimage.get_rect(center = [width/2, height/2])
     
     if score > score2:
         bgImage = pygame.image.load ("Background/SPOONERRRR.png")
